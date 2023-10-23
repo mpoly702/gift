@@ -8,7 +8,7 @@ void instance(void)
 {
 	char *instance;
 
-	instance = "$";
+	instance = "$ ";
 
 	write(1, instance, 1);
 }
