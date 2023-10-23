@@ -11,9 +11,6 @@
  */
 int main(int argc, char **argv)
 {
-	char *in;
-	char **tokens;
-	int state;
 	
 	/*declaring void variables*/
 	(void)argc; (void)argv;
@@ -22,9 +19,9 @@ int main(int argc, char **argv)
 	if isatty(STDIN_FILENO)
 	{
 		instance();
-		in = input();
-		tokens = tokenizer(in);
-		state = execute(tokens);
+		input();
+		tokenizer(in);
+		execute(tokens);
 
 		free(in);
 		free(tokens);
