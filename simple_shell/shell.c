@@ -18,9 +18,9 @@ int main(int argc, char **argv)
 	/*declaring void variables*/
 	(void)argc; (void)argv;
 
-	state = isatty(STDIN_FILENO);
 	
-	do {
+	if isatty(STDIN_FILENO)
+	{
 		instance();
 		in = input();
 		tokens = tokenizer(in);
@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 
 		free(in);
 		free(tokens);
-	} while (state);
+	}
 
 	return (0);
 }
