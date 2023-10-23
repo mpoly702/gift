@@ -14,10 +14,12 @@ int main(int argc, char **argv)
 	char *in;
 	char **tokens;
 	int state;
-
+	
 	/*declaring void variables*/
 	(void)argc; (void)argv;
 
+	state = isatty(STDIN_FILENO);
+	
 	do {
 		instance();
 		in = input();
